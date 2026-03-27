@@ -4,9 +4,9 @@
 
 <head>
     <link rel="shortcut icon" href="./assets/favicon.ico">
-    <meta name="description" content="MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance">
-    <meta name="keywords" content="multiverseg,segmentation,interactive,context,in-context,medical,biomedical,annotation,neural-networks,imaging,biomedical,scribbleprompt">
-    <title>MultiverSeg</title>
+    <meta name="description" content="BackSplit: The Importance of Sub-dividing the Background in Biomedical Lesion Segmentation">
+    <meta name="keywords" content="backsplit,segmentation,lesion,background,medical,biomedical,fisher-information,neural-networks,imaging,binary-segmentation,multi-class">
+    <title>BackSplit</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -33,108 +33,148 @@
 
   <div class="desktop-only">
     <div class="container text-center">
-      <h1>MultiverSeg</h1>
-      <h3>Scalable Interactive Segmentation of Biomedical Imaging Datasets<br>with In-Context Guidance</h3>
+      <h1>BackSplit</h1>
+      <h3>The Importance of Sub-dividing the Background<br>in Biomedical Lesion Segmentation</h3>
     </div>
 
     <div class="table-like authors" style="justify-content:space-evenly;max-width:880px;margin:auto;margin-top:1em;">
       <div>
         <center>
-          <a href="https://halleewong.github.io/" style="font-size: larger">Hallee E. Wong</a>
+          <a href="https://rachitsaluja.com/" style="font-size: larger">Rachit Saluja*</a>
         </center>
         <center>
-          MIT CSAIL & MGH
-        </center>
-      </div>
-      <div>
-        <center>
-          <a href="https://josejg.com/" style="font-size: larger">Jose Javier Gonzalez Ortiz</a>
-        </center>
-        <center>
-          Databricks Mosaic Research
+          Cornell University
         </center>
       </div>
       <div>
         <center>
-          <a href="https://people.csail.mit.edu/guttag/" style="font-size: larger">John Guttag</a>
+          <span style="font-size: larger">Asli Cihangir</span>
         </center>
         <center>
-          MIT CSAIL
+          Cornell University
         </center>
       </div>
       <div>
         <center>
-          <a href="http://www.mit.edu/~adalca/" style="font-size: larger">Adrian V. Dalca</a>
+          <span style="font-size: larger">Ruining Deng</span>
         </center>
         <center>
-          MIT CSAIL & HMS, MGH
+          Cornell Tech
+        </center>
+      </div>
+      <div>
+        <center>
+          <span style="font-size: larger">Johannes C. Paetzold</span>
+        </center>
+        <center>
+          Cornell Tech
+        </center>
+      </div>
+      <div>
+        <center>
+          <span style="font-size: larger">Fengbei Liu</span>
+        </center>
+        <center>
+          Cornell Tech
+        </center>
+      </div>
+      <div>
+        <center>
+          <span style="font-size: larger">Mert R. Sabuncu</span>
+        </center>
+        <center>
+          Cornell University
         </center>
       </div>
     </div>
 
+    <div class="container text-center" style="margin-top: 0.5em;">
+      <p style="font-size: smaller;">* Corresponding Author: rs2492@cornell.edu</p>
+    </div>
+
     <div class="container text-center">
-      <h3 style="font-weight: bold; color: #f79646"> ICCV 2025 </h3>
+      <h3 style="font-weight: bold; color: #f79646"> CVPR 2026 </h3>
     </div>
   </div>
 
   <div class="mobile-only">
     <div class="container text-center">
-      <h1 style="font-size:13vw">MultiverSeg</h1>
-      <h3>Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance</h3>
+      <h1 style="font-size:13vw">BackSplit</h1>
+      <h3>The Importance of Sub-dividing the Background in Biomedical Lesion Segmentation</h3>
     </div>
 
     <div class="table-like authors" style="justify-content:space-evenly;max-width:880px;margin:auto;margin-top:1em;">
       <div>
         <center>
-          <a href="https://halleewong.github.io/" style="font-size: larger; padding: 0em 2em">Hallee E. Wong</a>
+          <a href="https://rachitsaluja.com/" style="font-size: larger; padding: 0em 2em">Rachit Saluja*</a>
         </center>
         <center>
-          MIT CSAIL & MGH
-        </center>
-      </div>
-      <div>
-        <center>
-          <a href="https://josejg.com/" style="font-size: larger">Jose Javier Gonzalez Ortiz</a>
-        </center>
-        <center>
-          Databricks Mosaic Research
+          Cornell University
         </center>
       </div>
       <div>
         <center>
-          <a href="https://people.csail.mit.edu/guttag/" style="font-size: larger; padding: 0em 2em">John Guttag</a>
+          <span style="font-size: larger">Asli Cihangir</span>
         </center>
         <center>
-          MIT CSAIL
+          Cornell University
         </center>
       </div>
       <div>
         <center>
-          <a href="http://www.mit.edu/~adalca/" style="font-size: larger; padding: 0em 2em">Adrian V. Dalca</a>
+          <span style="font-size: larger; padding: 0em 2em">Ruining Deng</span>
         </center>
         <center>
-          MIT CSAIL & HMS, MGH
+          Cornell Tech
+        </center>
+      </div>
+      <div>
+        <center>
+          <span style="font-size: larger">Johannes C. Paetzold</span>
+        </center>
+        <center>
+          Cornell Tech
+        </center>
+      </div>
+      <div>
+        <center>
+          <span style="font-size: larger; padding: 0em 2em">Fengbei Liu</span>
+        </center>
+        <center>
+          Cornell Tech
+        </center>
+      </div>
+      <div>
+        <center>
+          <span style="font-size: larger; padding: 0em 2em">Mert R. Sabuncu</span>
+        </center>
+        <center>
+          Cornell University
         </center>
       </div>
     </div>
 
+    <div class="container text-center" style="margin-top: 0.5em;">
+      <p style="font-size: smaller;">* Corresponding Author: rs2492@cornell.edu</p>
+    </div>
+
     <div class="container text-center">
-      <h3 style="font-weight: bold; color: #f79646"> ICCV 2025 </h3>
+      <h3 style="font-weight: bold; color: #f79646"> CVPR 2026 </h3>
     </div>
   </div>
 </div>
 
 <div class="container is-centered">
         <div class="row text-center">
-         
-        <a href="https://arxiv.org/abs/2412.15058" target="_blank">
+
+        <a href="#" target="_blank">
             <button class="button-link">
             <i class="fa-regular fa-file-lines fa-lg" style="color: #ffffff;"></i>
             &nbsp;Paper
         </button>
         </a>
 
-        <a href="https://github.com/halleewong/MultiverSeg" target="_blank">
+        <a href="https://github.com/rachitsaluja/BackSplit" target="_blank">
         <button class="button-link">
             <i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i>
             &nbsp;Code
@@ -150,19 +190,11 @@
     <h2 class="text-center ">Overview</h2>
     <hr/>
     <p>
-      <b>MultiverSeg enables users to rapidly segment new biomedical imaging datasets.</b> 
-      The MultiverSeg network takes as input an image to segment and user interactions, along with a context set of previously segmented image-segmentation pairs (<b>left</b>). 
-    </p>
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <br>
-        <img src="assets/teaser.png" alt="overview of multiverseg system" style="display: block; margin: 0 auto;">
-      </div>
-    </div>
-    <br>
-    <p>
-      As the user completes more segmentations, those images and segmentations become additional inputs to the model, populating the context set. 
-      As the context set of labeled images grows, the number of interactions required to achieve an accurate segmentation decreases (<b>right</b>).
+      <b>BackSplit improves lesion segmentation by sub-dividing the background into semantically meaningful auxiliary classes.</b>
+      Conventional lesion segmentation collapses all non-lesion regions into a single background, discarding the anatomical context and often producing false positives.
+      BackSplit refines the background into semantically meaningful auxiliary structures (e.g., organ parenchyma) that are learned jointly with the lesion target.
+      This structured background supervision enriches contextual understanding, yielding sharper lesion boundaries, fewer false detections, and theoretically more stable predictions &mdash;
+      consistent with higher expected Fisher Information and reduced estimator variance compared to conventional binary training.
     </p>
   </div>
 </section>
@@ -174,13 +206,13 @@
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <p>
-          Medical researchers and clinicians often need to perform novel segmentation tasks on a set of related images. Existing methods for segmenting a new dataset are either interactive, requiring substantial human effort for each image, or require an existing set of manually labeled images. 
+          Segmenting small lesions in medical images remains notoriously difficult. Most prior work tackles this challenge by either designing better architectures, loss functions, or data augmentation schemes; and collecting more labeled data. We take a different view, arguing that part of the problem lies in how the background is modeled. Common lesion segmentation collapses all non-lesion pixels into a single "background" class, ignoring the rich anatomical context in which lesions appear. In reality, the background is highly heterogeneous &mdash; composed of tissues, organs, and other structures that can now be labeled manually or inferred automatically using existing segmentation models.
           <br>
           <br>
-          We introduce a system, <b>MultiverSeg</b>, that enables practitioners to rapidly segment an entire new dataset without requiring access to any existing labeled data from that task or domain. Along with the image to segment, the model takes user interactions such as clicks, bounding boxes or scribbles as input, and predicts a segmentation. As the user segments more images, those images and segmentations become additional inputs to the model, providing context. As the context set of labeled images grows, the number of interactions required to segment each new image decreases. 
+          In this paper, we argue that training with fine-grained labels that sub-divide the background class, which we call <b>BackSplit</b>, is a simple yet powerful paradigm that can offer a significant performance boost without increasing inference costs. From an information theoretic standpoint, we prove that BackSplit increases the expected Fisher Information relative to conventional binary training, leading to tighter asymptotic bounds and more stable optimization.
           <br>
           <br>
-          We demonstrate that MultiverSeg enables users to interactively segment new datasets efficiently, by amortizing the number of interactions per image to achieve an accurate segmentation. Compared to using a state-of-the-art interactive segmentation method, using MultiverSeg reduced the total number of clicks by 36% and scribble steps by 25% to achieve 90% Dice on sets of images from unseen tasks. 
+          With extensive experiments across multiple datasets and architectures, we empirically show that BackSplit consistently boosts small-lesion segmentation performance, even when auxiliary labels are generated automatically using pretrained segmentation models. Additionally, we demonstrate that auxiliary labels derived from interactive segmentation frameworks exhibit the same beneficial effect, demonstrating its robustness, simplicity, and broad applicability.
         </p>
       </div>
     </div>
@@ -192,60 +224,54 @@
     <h2 class="text-center ">Method</h2>
     <hr/>
     <p>
-      The MultiverSeg network (<b>left</b>) takes as input a stack of target image inputs and a context set of image-segmentation pairs. 
-      The target image inputs include the target image to segment, optional user interactions, and a previous predicted segmentation if available. 
+      BackSplit decomposes the background into multiple auxiliary classes and jointly optimizes them alongside the lesion target, thereby improving the supervision signal for the primary segmentation objective.
+      During inference, the model predicts the target class while implicitly leveraging the contextual knowledge learned from the auxiliary background classes, even though they are not explicitly used.
     </p>
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <br>
-        <img src="assets/architecture.png" alt="multiverseg architecture" style="display: block; margin: 0 auto;">
-      </div>
-    </div>
     <br>
     <p>
-      The architecture is comprised of an encoder-decoder structure similar to a UNet. 
-      We use a <a href=https://universeg.csail.mit.edu/>CrossBlock</a> mechanism (<b>right</b>) with additional normalization layers to interact the features of the target image inputs with the features of the context set inputs throughout the network.
+      We formally demonstrate that multi-class training yields higher expected Fisher Information than coarsened binary training, therefore providing more statistically efficient predictions for the target class.
+      In binary training, the background gradient conflates signals from multiple anatomical structures. Decomposing it into semantically distinct support structures yields more disentangled and informative gradients, leading to sharper curvature and higher Fisher Information.
     </p>
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="text-center ">Evaluation</h2>
-    <hr/>
-    <b>We evaluate different approaches to segmenting an entire new biomedical datasets</b>. We compare MultiverSeg to an interactive segmentation approach (<a href=https://scribbleprompt.csail.mit.edu/">ScribblePrompt</a>) as well as combining off-the-shelf models for in-context and interactive segmentation (SP+UVS). 
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <img src="assets/interactions-to-90-dice.png" alt="examples" style="display: block; margin: 0 auto;">
-      </div>
-    </div>
-    <br>
-    <p>
-      <b>MultiverSeg's interactive segmentation performance improves as more images are segmented</b> and added to the context set, demonstrating the model is able to use information from the context set to improve its predictions.
-    </p>
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <br>
-        <img src="assets/interseg-in-context.png" alt="quantative results" style="display: block; margin: 0 auto;">
-      </div>
-    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="text-center ">Visualization</h2>
+    <h2 class="text-center ">Key Contributions</h2>
+    <hr/>
+    <ol>
+      <li>We show that training with BackSplit yields higher expected Fisher Information compared to binary training, leading to tighter asymptotic convergence bounds.</li>
+      <br>
+      <li>We validate the paradigm across five diverse datasets spanning multiple imaging modalities and anatomical regions, consistently improving performance metrics and reducing false positives across all architectures.</li>
+      <br>
+      <li>We show that BackSplit remains effective even when trained with automatically generated or noisy auxiliary segmentations, making it more practical and easier to implement in real-world settings.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Experiments</h2>
     <hr/>
     <p>
-      We show predictions from MultiverSeg and baselines for random examples given a context set of 10 previously segmented examples from the same unseen task and one correction click or scribble. 
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <br>
-        <img src="assets/qualitative-examples.png" alt="examples of predictions from multiverseg and baselines" style="display: block; margin: 0 auto;">
-      </div>
-    </div>
+      <b>BackSplit is architecture-agnostic and consistently improves performance.</b> We evaluate BackSplit across three widely adopted segmentation backbones (U-Net, ResEncU-Net, and SegResNet) on five diverse datasets spanning CT, MRI, and PET modalities.
+    </p>
+    <br>
+    <p>
+      Across all datasets and architectures, BackSplit consistently improves performance (measured with Dice, normalized surface distance, and the 95th-percentile Hausdorff distance) without increasing model parameters.
+      The auxiliary classes typically correspond to organs or tissues adjacent to the target structure, demonstrating that structured background supervision improves lesion delineation without modifying the network architecture.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="text-center ">Robustness</h2>
+    <hr/>
+    <p>
+      BackSplit works with automatically derived auxiliary segmentations from large pretrained models such as TotalSegmentator and VIBE-Segmentator, as well as noisy labels from interactive segmentation frameworks.
+      Even highly noisy, interactively generated auxiliary cues can enhance target segmentation performance under the BackSplit paradigm, highlighting its robustness to imperfect supervision.
+    </p>
   </div>
 </section>
 
@@ -255,11 +281,11 @@
     <hr/>
     <p>If you find our work or any of our materials useful, please cite our paper:</p>
     <div class="alert alert-light citation">
-        @article{wong2025multiverseg,<br>
-          &nbsp;&nbsp;title={MultiverSeg: Scalable Interactive Segmentation of Biomedical Imaging Datasets with In-Context Guidance},<br>
-          &nbsp;&nbsp;author={Hallee E. Wong and Jose Javier Gonzalez Ortiz and John Guttag and Adrian V. Dalca},<br>
-          &nbsp;&nbsp;journal={International Conference on Computer Vision},<br>
-          &nbsp;&nbsp;year={2025},<br>
+        @article{saluja2026backsplit,<br>
+          &nbsp;&nbsp;title={BackSplit: The Importance of Sub-dividing the Background in Biomedical Lesion Segmentation},<br>
+          &nbsp;&nbsp;author={Rachit Saluja and Asli Cihangir and Ruining Deng and Johannes C. Paetzold and Fengbei Liu and Mert R. Sabuncu},<br>
+          &nbsp;&nbsp;journal={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
+          &nbsp;&nbsp;year={2026},<br>
     }
     </div>
   </div>
@@ -267,7 +293,7 @@
 
 
 <div style="text-align: center;">
-  <a href="https://accessibility.mit.edu/">Accessibility</a>
+  <a href="https://accessibility.cornell.edu/">Accessibility</a>
 </div>
 <br>
 
